@@ -4,7 +4,7 @@ public:
         if(s.length() != t.length()){
             return false;
         }
-    unordered_map<int, int> freq;
+    unordered_map<char, int> freq;
     for(char c : s){
         freq[c]++;
     }
