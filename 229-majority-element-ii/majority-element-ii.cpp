@@ -9,7 +9,7 @@ public:
             freq[num]++;
         }
 
-        for(auto &p : freq){
+        for(auto p : freq){
             if(p.second > n/3){
                 res.push_back(p.first);
             }
