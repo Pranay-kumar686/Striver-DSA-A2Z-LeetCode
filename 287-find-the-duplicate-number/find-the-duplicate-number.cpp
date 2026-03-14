@@ -8,6 +8,6 @@ public:
             }
             st.insert(x);
         }
-        return {};
+        return -1;
     }
 };
