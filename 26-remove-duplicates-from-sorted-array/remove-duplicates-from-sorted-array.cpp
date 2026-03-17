@@ -1,14 +1,14 @@
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
-        int n = nums.size();
-        int i=0; // index of last unique index
-        for(int j=1; j <n; j++){
-            if(nums[i] != nums[j]){
-                nums[i+1] = nums[j];
-                i++;
+        int k = nums.size();
+        int slow=1;
+        for(int fast=1; fast < k; fast++){
+            if(nums[fast] != nums[slow-1]){
+                nums[slow]=nums[fast];
+                slow++; 
             }
         }
-        return (i+1); // i will be the index of the new array so i+1 will be no of elements
+        return slow;
     }
 };
