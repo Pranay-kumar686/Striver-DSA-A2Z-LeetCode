@@ -1,11 +1,11 @@
 class Solution {
 public:
     bool isPalindrome(string s) {
-        int n=s.size();
-        int i=0;
-        int j=n-1;
+        int n =s.size();
+        int i=0; 
+        int j =n-1;
         while(i < j){
-            if(!isalnum(s[i])){//isalnum->checks if s[i] is a letter or number
+            if(!isalnum(s[i])){
                 i++;
                 continue;
             }
