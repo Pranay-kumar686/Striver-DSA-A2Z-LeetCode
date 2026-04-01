@@ -2,17 +2,18 @@ class Solution {
 public:
     vector<int> productExceptSelf(vector<int>& nums) {
         int n = nums.size();
-        vector<int> res(n, 1);//creates a vector of size n with all the values = 1 (1,1,1,1)
-        // left side
+        vector<int> answer(n, 1);//(1,1,1,1)
+        //divide the nums into left and right splits
+        //left side product
         for(int i=1; i<n; i++){
-            res[i] = res[i-1] * nums[i-1];
+            answer[i] = answer[i-1] * nums[i-1];
         }
-        //right product
+        //right split product
         int right=1;
-        for(int i=n-1; i>=0; i--){
-            res[i] *= right;
+        for(int i=n-1; i>= 0; i--){
+            answer[i] *= right;
             right *= nums[i];
         }
-        return res;
+        return answer;
     }
 };
