@@ -1,12 +1,13 @@
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
-        int k = nums.size();
+        int x=nums.size();
+        if(x == 1) return 1;
         int slow=1;
-        for(int fast=1; fast < k; fast++){
-            if(nums[fast] != nums[slow-1]){
+        for(int fast=1; fast<x; fast++){
+            if(nums[fast] != nums[fast-1]){
                 nums[slow]=nums[fast];
-                slow++; 
+                slow++;
             }
         }
         return slow;
