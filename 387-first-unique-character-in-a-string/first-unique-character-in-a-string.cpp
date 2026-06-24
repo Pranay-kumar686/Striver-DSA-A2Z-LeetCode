@@ -2,12 +2,12 @@ class Solution {
 public:
     int firstUniqChar(string s) {
         int n = s.size();
-        vector<int> freq(26,0);
-        for(int i=0; i < n; i++){
-            freq[s[i] - 'a']++;
+        unordered_map<char, int> freq;
+        for(char c : s){
+            freq[c]++;
         }
         for(int i=0; i<n; i++){
-            if(freq[s[i] - 'a'] == 1){
+            if(freq[s[i]] == 1){
                 return i;
             }
         }
