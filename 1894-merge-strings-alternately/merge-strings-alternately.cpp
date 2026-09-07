@@ -9,12 +9,12 @@ public:
             i++;
             j++;
         }
-        while(i < word1.size()){
-            res += word1[i];
+        while(i<word1.size()){
+            res+=word1[i];
             i++;
         }
-        while(j < word2.size()){
-            res += word2[j];
+        while(j<word2.size()){
+            res+=word2[j];
             j++;
         }
         return res;
